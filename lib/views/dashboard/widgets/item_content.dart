@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dev_partner_exam2/constants/colors.dart';
 import 'package:dev_partner_exam2/constants/font_style.dart';
 import 'package:dev_partner_exam2/data/model/content.dart';
+import 'package:dev_partner_exam2/utils/extension.dart';
 import 'package:dev_partner_exam2/views/dashboard/widgets/item_tags.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -67,12 +68,13 @@ class ItemContentWidget extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 4),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const SizedBox(height: 2,),
                           Row(
                             children: [
                               Image.asset("assets/images/article-icon.png",height: 18,),
-                              Text(" Article \u2022 ${content.toDateString}", style: AppFontStyle.font12.copyWith(color: AppColors.greyText),),
+                              Text(" ${content.type.capitalizeFirstLetter} \u2022 ${content.toDateString}", style: AppFontStyle.font12.copyWith(color: AppColors.greyText),),
                             ],
                           ),
                           const SizedBox(height: 4,),

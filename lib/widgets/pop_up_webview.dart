@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class PopUpWebView{
-  static show(BuildContext context,String url){
+  static show(BuildContext context,String url,String type){
     showDialog(context: context,
       builder: (context){
         return Scaffold(
           appBar: AppBar(
               elevation: 0,
               centerTitle: true,
-              title: Text( "Content", style: AppFontStyle.font20.copyWith(fontWeight: FontWeight.bold,color: AppColors.colorAll),),
+              title: Text( type, style: AppFontStyle.font20.copyWith(fontWeight: FontWeight.bold,color: AppColors.colorAll),),
               leading: IconButton(
                   onPressed: ()async{
                     Navigator.pop(context);

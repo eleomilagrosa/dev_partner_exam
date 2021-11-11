@@ -6,6 +6,7 @@ import 'package:dev_partner_exam2/controllers/app_controller.dart';
 import 'package:dev_partner_exam2/controllers/dashboard_controller.dart';
 import 'package:dev_partner_exam2/data/model/content.dart';
 import 'package:dev_partner_exam2/data/model/tags.dart';
+import 'package:dev_partner_exam2/utils/extension.dart';
 import 'package:dev_partner_exam2/views/dashboard/widgets/item_content.dart';
 import 'package:dev_partner_exam2/views/dashboard/widgets/item_tags.dart';
 import 'package:dev_partner_exam2/widgets/pop_up_webview.dart';
@@ -127,7 +128,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 content: content,
                 isBookMarked: content.isBookMarked,
                 onTapBody: (){
-                  PopUpWebView.show(context, content.contentUrl);
+                  PopUpWebView.show(context, content.contentUrl,content.type.capitalizeFirstLetter);
                 },
                 onTapBookMarked:(){
                   content.isBookMarked = !content.isBookMarked;

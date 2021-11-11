@@ -2,7 +2,9 @@ import 'package:dev_partner_exam2/constants/colors.dart';
 import 'package:dev_partner_exam2/constants/font_style.dart';
 import 'package:dev_partner_exam2/controllers/dashboard_controller.dart';
 import 'package:dev_partner_exam2/data/model/content.dart';
+import 'package:dev_partner_exam2/utils/extension.dart';
 import 'package:dev_partner_exam2/views/dashboard/widgets/item_content.dart';
+import 'package:dev_partner_exam2/widgets/pop_up_webview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -30,7 +32,7 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
                   content: content,
                   isBookMarked: content.isBookMarked,
                   onTapBody: (){
-
+                    PopUpWebView.show(context, content.contentUrl,content.type.capitalizeFirstLetter);
                   },
                   onTapBookMarked:(){
                     content.isBookMarked = !content.isBookMarked;
