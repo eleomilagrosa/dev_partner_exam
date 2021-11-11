@@ -20,8 +20,8 @@ any of the tags in the Tags List near the top of the UI should filter
 the Learn Content list to only show Learn content with tags that
 match the selected one.
 
-#Demo Video
-<img src="task4.png" height="400">
+[Demo Video](https://watch.screencastify.com/v/JoO4mEQoqLNpbtxUwmHt)
+
 <p>
 <img src="task1.png" height="400">
 <img src="task2.png" height="400">
