@@ -1,4 +1,4 @@
-### Run the project in android only
+### Run the project in android device or emulator only
 ```
 $ flutter pub get
 $ flutter run
